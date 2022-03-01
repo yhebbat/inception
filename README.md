@@ -1,6 +1,6 @@
 # inception
 Ce projet a pour but d’approfondir vos connaissances en vous faisant utiliser Docker. Vous allez virtualiser plusieurs images Docker en les créant dans votre nouvelle machine virtuelle personnelle.
-### DOCKER CMD
+# Docker CMD
 ## List Docker CLI commands
 docker
 docker container --help
