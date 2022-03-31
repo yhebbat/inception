@@ -5,33 +5,35 @@ services:
       build: ./srcs/nginx/
       image: nginx
       container_name: nginx
+      depends_on:
+        - wordpress
       ports:
       - "443:443"
       networks:
         - net
       volumes:
-       - vol:/var/www/html
+       - vol:/var/www
 
     wordpress:
       build: ./srcs/wordpress/
       container_name: wordpress
-      # command: tail -F anything
+      env_file:
+        - .env
       ports:
       - "9000"
       networks:
         - net
       volumes:
-       - vol:/var/www/html
+       - vol:/var/www/
     mariadb:
       build: ./srcs/mariadb/
       container_name: mariadb
-      command: tail -F anything
       ports:
       - "3306"
       networks:
         - net
       volumes:
-       - vol2:/var/lib/mysql
+       - vol2:/var/lib/mysql/
 networks:
   net:
     driver: bridge

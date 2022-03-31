@@ -6,8 +6,9 @@ SET foreign_key_checks = 0;
 SET sql_mode = 'NO_AUTO_VALUE_ON_ZERO';
 
 SET NAMES utf8mb4;
--- CREATE DATABASE IF NOT EXISTS `wordpress` DEFAULT CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci;
-CREATE DATABASE wordpress;
+
+
+CREATE DATABASE wordpress; 
 CREATE USER 'wordpress_user'@'%.%.%.%' IDENTIFIED BY 'password';
 GRANT ALL PRIVILEGES ON wordpress.* TO 'wordpress_user'@'%.%.%.%';
 FLUSH PRIVILEGES;

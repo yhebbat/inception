@@ -1,0 +1,27 @@
+apt-get install -y mariadb-server mariadb-client;
+apt update; apt-get install -y mariadb-server mariadb-client;
+service mysql start
+mysql
+apt-get install -y curl vim php7.3-fpm php7.3-cli php7.3-common php7.3-curl php7.3-gd php7.3-mbstring php7.3-mysql php7.3-xml php7.3-xmlrpc php7.3-zip php-curl php-gd php-intl php-mbstring php-soap php-xml php-xmlrpc php-zip 
+cd /etc/php/7.3/fpm/pool.d
+ls
+clear
+vi www.conf 
+vim www.conf 
+curl -O https://wordpress.org/latest.tar.gz
+tar xzvf latest.tar.gz
+ls
+mkdir /var/www
+mkdir /var/www/html
+cp -a ./wordpress/. /var/www/html
+ls
+rm -rf wordpress/
+ls
+cd /var/www/html
+ls
+vi wp-config.php 
+sed -i 's/username_here/'$_MYSQL_USER'/g' /var/www/html/wp-config.php
+vi wp-config.php 
+chown -R www-data:www-data /var/www/html
+find /var/www/html/ -type d -exec chmod 750 {} \;
+find /var/www/html/ -type f -exec chmod 640 {} \;
