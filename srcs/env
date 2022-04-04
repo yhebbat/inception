@@ -1,0 +1,5 @@
+DATABASE_NAME=wordpress
+USER=yhebbat
+USER_PASSWORD=wordpress
+SECOND_USER=yhebbat2
+SECOND_PASSWORD=wordpress

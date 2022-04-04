@@ -1,4 +1,0 @@
-WP_DATABASE_USER=wordpress_user
-WP_DATABASE_PASSWORD=password
-WP_DATABASE_NAME=wordpress
-WP_HOSTNAME=mariadb
