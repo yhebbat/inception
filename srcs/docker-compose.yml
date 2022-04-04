@@ -53,10 +53,10 @@ volumes:
         driver_opts:
             o: bind
             type: ext4
-            device: /Users/yhebbat/Desktop/yhebbat/wp
+            device: ./srcs/wp
     db:
         driver: "local"
         driver_opts:
             o: bind
             type: ext4
-            device: /Users/yhebbat/Desktop/yhebbat/db
+            device: ./srcs/db
