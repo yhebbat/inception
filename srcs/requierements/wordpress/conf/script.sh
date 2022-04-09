@@ -2,7 +2,7 @@ sed -i 's|listen = /run/php/php7.3-fpm.sock|listen = 0.0.0.0:9000|g' /etc/php/7.
 if [ ! -d "/run/php" ]; then
 mkdir /run/php/;
 fi
-if [ ! -d "/var/www/wp" ]; then
+if [ ! -f "/var/www/wp/wp-config.php" ]; then
 echo "ramadaaaaan"
 cd /tmp \
     && curl -LO https://wordpress.org/latest.tar.gz && tar xzvf latest.tar.gz \
