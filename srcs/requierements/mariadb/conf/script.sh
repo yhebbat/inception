@@ -3,7 +3,6 @@
 if [ ! -d "/var/lib/mysql/wordpress" ]; then
     service mysql start
     sleep 5
-    echo "zebiiiii"
     mysql -u root -e  "CREATE DATABASE IF NOT EXISTS wordpress; flush privileges;"
     mysql -u root -e "use wordpress; grant all privileges on *.* to 'yhebbat'@'localhost' IDENTIFIED BY 'wordpress'; flush privileges;"
     mysql -u root -e "use wordpress; grant all privileges on *.* to '${USER}'@'%.%.%.%' IDENTIFIED BY '${USER_PASSWORD}'; flush privileges;"
